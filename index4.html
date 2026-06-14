@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weligama Cabs — Reliable Airport Transfers & Private Tours Across Sri Lanka</title>
+  <meta name="description" content="Reliable airport transfers, private taxi service, day tours and round tours across Sri Lanka. Luxury vehicles with professional, English-speaking drivers. 24/7 booking." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            night:  '#042b32',
+            ocean:  '#0a5560',
+            teal:   '#0e8a8c',
+            gold:   '#d9a441',
+            golddk: '#bd8a2c',
+            sand:   '#f7f3ec',
+            whatsapp: '#25d366',
+          },
+          fontFamily: {
+            display: ['Sora', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            soft: '0 18px 50px -22px rgba(4,43,50,0.45)',
+            card: '0 10px 30px -14px rgba(4,43,50,0.35)',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    h1,h2,h3,.font-display { font-family: 'Sora', sans-serif; }
+    .text-balance { text-wrap: balance; }
+    .text-pretty { text-wrap: pretty; }
+    /* FAQ accordion */
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .faq-chevron { transform: rotate(180deg); }
+    .faq-chevron { transition: transform .25s ease; }
+    /* hide scrollbar for route rail */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+
+<body class="bg-sand text-night antialiased">
+
+  <!-- ============================ HEADER ============================ -->
+  <header id="top" class="fixed inset-x-0 top-0 z-50 transition-all duration-300" data-header>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mt-3 flex items-center justify-between rounded-2xl border border-white/10 bg-night/85 px-4 py-3 backdrop-blur-md shadow-soft md:px-6" data-headerbar>
+        <!-- Logo -->
+        <a href="#top" class="flex items-center gap-3">
+          <span class="grid h-10 w-10 place-items-center rounded-xl bg-gold text-night">
+            <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6.5 17l-1.2-5.2A2 2 0 0 1 7.25 9.3h9.5a2 2 0 0 1 1.95 2.5L17.5 17"/><path d="M5 9.5 6.3 5.8A2 2 0 0 1 8.2 4.5h7.6a2 2 0 0 1 1.9 1.3L19 9.5"/><circle cx="7.5" cy="19" r="1.6"/><circle cx="16.5" cy="19" r="1.6"/></svg>
+          </span>
+          <span class="leading-tight">
+            <span class="block font-display text-lg font-700 text-white">Weligama Cabs</span>
+            <span class="block text-[11px] font-500 uppercase tracking-[0.18em] text-gold">Sri Lanka Transfers</span>
+          </span>
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden items-center gap-7 lg:flex">
+          <a href="#services" class="text-sm font-500 text-white/80 transition hover:text-gold">Services</a>
+          <a href="#fleet" class="text-sm font-500 text-white/80 transition hover:text-gold">Fleet</a>
+          <a href="#routes" class="text-sm font-500 text-white/80 transition hover:text-gold">Routes</a>
+          <a href="#tours" class="text-sm font-500 text-white/80 transition hover:text-gold">Tours</a>
+          <a href="#reviews" class="text-sm font-500 text-white/80 transition hover:text-gold">Reviews</a>
+          <a href="#faq" class="text-sm font-500 text-white/80 transition hover:text-gold">FAQ</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <a href="https://wa.me/94761234567?text=Hi%20Weligama%20Cabs,%20I'd%20like%20to%20book%20a%20ride." target="_blank" rel="noopener"
+             class="hidden items-center gap-2 rounded-xl bg-whatsapp px-4 py-2.5 text-sm font-600 text-white shadow-card transition hover:brightness-105 sm:inline-flex">
+            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.7-.84-2-.93-.27-.1-.46-.15-.65.15-.2.3-.74.93-.9 1.12-.18.2-.34.22-.63.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.18-.3-.02-.46.13-.6.13-.14.3-.34.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.65-1.57-.9-2.15-.24-.56-.48-.48-.65-.49l-.56-.01c-.2 0-.5.07-.77.36-.27.3-1.02 1-1.02 2.42 0 1.43 1.04 2.8 1.19 3 .15.2 2.05 3.12 4.96 4.38.7.3 1.24.48 1.66.62.7.22 1.33.19 1.83.12.56-.08 1.7-.7 1.95-1.36.24-.67.24-1.24.17-1.36-.07-.12-.27-.2-.56-.34z"/><path d="M12 2a10 10 0 0 0-8.6 15.07L2 22l5.05-1.32A10 10 0 1 0 12 2zm0 18.2a8.18 8.18 0 0 1-4.17-1.14l-.3-.18-3 .78.8-2.92-.2-.31A8.2 8.2 0 1 1 12 20.2z"/></svg>
+            WhatsApp
+          </a>
+          <a href="#quote" class="hidden rounded-xl bg-gold px-4 py-2.5 text-sm font-700 text-night shadow-card transition hover:bg-golddk md:inline-flex">Free Quote</a>
+
+          <!-- Mobile toggle -->
+          <button type="button" data-menu-btn class="grid h-11 w-11 place-items-center rounded-xl bg-white/10 text-white lg:hidden" aria-label="Open menu">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div data-menu class="hidden px-4 sm:px-6">
+      <nav class="mx-auto mt-2 max-w-7xl rounded-2xl border border-white/10 bg-night/95 p-3 backdrop-blur-md shadow-soft">
+        <div class="grid">
+          <a href="#services" class="rounded-lg px-4 py-3 text-white/85 hover:bg-white/10" data-close>Services</a>
+          <a href="#fleet" class="rounded-lg px-4 py-3 text-white/85 hover:bg-white/10" data-close>Fleet</a>
+          <a href="#routes" class="rounded-lg px-4 py-3 text-white/85 hover:bg-white/10" data-close>Routes</a>
+          <a href="#tours" class="rounded-lg px-4 py-3 text-white/85 hover:bg-white/10" data-close>Tours</a>
+          <a href="#reviews" class="rounded-lg px-4 py-3 text-white/85 hover:bg-white/10" data-close>Reviews</a>
+          <a href="#faq" class="rounded-lg px-4 py-3 text-white/85 hover:bg-white/10" data-close>FAQ</a>
+        </div>
+        <div class="mt-2 grid grid-cols-2 gap-2">
+          <a href="https://wa.me/94761234567" target="_blank" rel="noopener" class="rounded-xl bg-whatsapp px-4 py-3 text-center text-sm font-600 text-white" data-close>WhatsApp</a>
+          <a href="#quote" class="rounded-xl bg-gold px-4 py-3 text-center text-sm font-700 text-night" data-close>Free Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================ HERO ============================ -->
+  <section class="relative isolate overflow-hidden bg-night pt-28 pb-20 sm:pt-32 lg:pb-28">
+    <!-- bg image -->
+    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-night via-ocean to-night">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=80"
+           onerror="this.remove()" alt="" class="h-full w-full object-cover opacity-30" />
+      <div class="absolute inset-0 bg-gradient-to-t from-night via-night/70 to-night/40"></div>
+    </div>
+
+    <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
+      <div class="lg:col-span-7">
+        <span class="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-600 uppercase tracking-[0.16em] text-gold">
+          <span class="h-1.5 w-1.5 rounded-full bg-gold"></span> Trusted island-wide · 24/7
+        </span>
+
+        <h1 class="mt-6 font-display text-4xl font-800 leading-[1.05] text-white text-balance sm:text-5xl lg:text-6xl">
+          Reliable Airport Transfers &amp; <span class="text-gold">Private Tours</span> Across Sri Lanka
+        </h1>
+
+        <p class="mt-6 max-w-xl text-lg leading-relaxed text-white/75 text-pretty">
+          Airport transfers, day tours, round tours — luxury vehicles with professional, English-speaking drivers. Fixed pricing, meet &amp; greet, no surprises.
+        </p>
+
+        <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <a href="https://wa.me/94761234567?text=Hi%20Weligama%20Cabs,%20I'd%20like%20to%20book%20a%20ride."
+             target="_blank" rel="noopener"
+             class="inline-flex items-center justify-center gap-2.5 rounded-2xl bg-whatsapp px-7 py-4 text-base font-700 text-white shadow-soft transition hover:brightness-105">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.7-.84-2-.93-.27-.1-.46-.15-.65.15-.2.3-.74.93-.9 1.12-.18.2-.34.22-.63.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.18-.3-.02-.46.13-.6.13-.14.3-.34.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.65-1.57-.9-2.15-.24-.56-.48-.48-.65-.49l-.56-.01c-.2 0-.5.07-.77.36-.27.3-1.02 1-1.02 2.42 0 1.43 1.04 2.8 1.19 3 .15.2 2.05 3.12 4.96 4.38.7.3 1.24.48 1.66.62.7.22 1.33.19 1.83.12.56-.08 1.7-.7 1.95-1.36.24-.67.24-1.24.17-1.36-.07-.12-.27-.2-.56-.34z"/><path d="M12 2a10 10 0 0 0-8.6 15.07L2 22l5.05-1.32A10 10 0 1 0 12 2zm0 18.2a8.18 8.18 0 0 1-4.17-1.14l-.3-.18-3 .78.8-2.92-.2-.31A8.2 8.2 0 1 1 12 20.2z"/></svg>
+            WhatsApp Booking
+          </a>
+          <a href="#quote"
+             class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/20 bg-white/5 px-7 py-4 text-base font-600 text-white backdrop-blur transition hover:border-gold/60 hover:text-gold">
+            Get Free Quote
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <!-- micro trust -->
+        <div class="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-white/70">
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-gold" fill="currentColor" viewBox="0 0 24 24"><path d="m12 17.27 5.18 3.13-1.37-5.9 4.58-3.97-6.03-.52L12 4.5l-2.36 5.51-6.03.52 4.58 3.97-1.37 5.9z"/></svg> 4.9 / 5 average rating</span>
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg> Licensed &amp; insured</span>
+          <span class="inline-flex items-center gap-2"><svg class="h-4 w-4 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v5l3 2"/></svg> Available 24/7</span>
+        </div>
+      </div>
+
+      <!-- Quote card -->
+      <div class="lg:col-span-5" id="quote">
+        <div class="rounded-3xl border border-white/15 bg-white p-6 shadow-soft sm:p-7">
+          <h2 class="font-display text-xl font-700 text-night">Get a free quote in minutes</h2>
+          <p class="mt-1 text-sm text-night/60">No payment now. We reply on WhatsApp.</p>
+          <form class="mt-5 grid gap-3.5" data-quote-form>
+            <div class="grid gap-3.5 sm:grid-cols-2">
+              <label class="block">
+                <span class="mb-1 block text-xs font-600 text-night/60">Pickup</span>
+                <input required type="text" placeholder="e.g. Colombo Airport (CMB)" class="w-full rounded-xl border border-night/15 bg-sand/60 px-3.5 py-3 text-sm outline-none transition focus:border-teal focus:ring-2 focus:ring-teal/20" />
+              </label>
+              <label class="block">
+                <span class="mb-1 block text-xs font-600 text-night/60">Drop-off</span>
+                <input required type="text" placeholder="e.g. Weligama" class="w-full rounded-xl border border-night/15 bg-sand/60 px-3.5 py-3 text-sm outline-none transition focus:border-teal focus:ring-2 focus:ring-teal/20" />
+              </label>
+            </div>
+            <div class="grid gap-3.5 sm:grid-cols-2">
+              <label class="block">
+                <span class="mb-1 block text-xs font-600 text-night/60">Date &amp; time</span>
+                <input type="datetime-local" class="w-full rounded-xl border border-night/15 bg-sand/60 px-3.5 py-3 text-sm outline-none transition focus:border-teal focus:ring-2 focus:ring-teal/20" />
+              </label>
+              <label class="block">
+                <span class="mb-1 block text-xs font-600 text-night/60">Passengers</span>
+                <select class="w-full rounded-xl border border-night/15 bg-sand/60 px-3.5 py-3 text-sm outline-none transition focus:border-teal focus:ring-2 focus:ring-teal/20">
+                  <option>1–3</option><option>4–6</option><option>7–9</option><option>10+</option>
+                </select>
+              </label>
+            </div>
+            <label class="block">
+              <span class="mb-1 block text-xs font-600 text-night/60">WhatsApp / phone</span>
+              <input required type="tel" placeholder="+94 7X XXX XXXX" class="w-full rounded-xl border border-night/15 bg-sand/60 px-3.5 py-3 text-sm outline-none transition focus:border-teal focus:ring-2 focus:ring-teal/20" />
+            </label>
+            <button type="submit" class="mt-1 inline-flex items-center justify-center gap-2 rounded-xl bg-gold px-5 py-3.5 text-sm font-700 text-night shadow-card transition hover:bg-golddk">
+              Request My Quote
+            </button>
+            <p class="text-center text-[11px] text-night/45">By submitting you agree to be contacted about your booking.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ TRUST BAR ============================ -->
+  <section class="border-y border-night/5 bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 divide-y divide-night/5 sm:grid-cols-4 sm:divide-y-0 sm:divide-x">
+        <div class="px-4 py-8 text-center">
+          <div class="font-display text-3xl font-800 text-teal sm:text-4xl">12+</div>
+          <div class="mt-1 text-sm font-500 text-night/60">Years of experience</div>
+        </div>
+        <div class="px-4 py-8 text-center">
+          <div class="font-display text-3xl font-800 text-teal sm:text-4xl">24/7</div>
+          <div class="mt-1 text-sm font-500 text-night/60">Availability &amp; support</div>
+        </div>
+        <div class="px-4 py-8 text-center">
+          <div class="font-display text-3xl font-800 text-teal sm:text-4xl">100%</div>
+          <div class="mt-1 text-sm font-500 text-night/60">Licensed drivers</div>
+        </div>
+        <div class="px-4 py-8 text-center">
+          <div class="font-display text-3xl font-800 text-teal sm:text-4xl">2,500+</div>
+          <div class="mt-1 text-sm font-500 text-night/60">Happy travelers</div>
+        </div>
+      </div>
+      <!-- Review badges -->
+      <div class="flex flex-wrap items-center justify-center gap-3 border-t border-night/5 py-6 sm:gap-4">
+        <span class="text-xs font-600 uppercase tracking-wider text-night/40">As rated on</span>
+        <div class="inline-flex items-center gap-2 rounded-full border border-night/10 bg-sand px-4 py-2 text-sm font-600 text-night">
+          <span class="text-[#00aa6c]">●</span> Tripadvisor
+          <span class="flex text-[#00aa6c]">★★★★★</span>
+        </div>
+        <div class="inline-flex items-center gap-2 rounded-full border border-night/10 bg-sand px-4 py-2 text-sm font-600 text-night">
+          <span class="font-700"><span class="text-[#4285F4]">G</span><span class="text-[#EA4335]">o</span><span class="text-[#FBBC05]">o</span><span class="text-[#4285F4]">g</span><span class="text-[#34A853]">l</span><span class="text-[#EA4335]">e</span></span>
+          Reviews <span class="flex text-gold">★★★★★</span> <span class="text-night/50">4.9</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ SERVICES ============================ -->
+  <section id="services" class="py-20 lg:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <span class="text-xs font-700 uppercase tracking-[0.18em] text-gold">What we offer</span>
+        <h2 class="mt-3 font-display text-3xl font-800 text-night text-balance sm:text-4xl">Services built around your journey</h2>
+        <p class="mt-4 text-lg text-night/60 text-pretty">From the moment you land to the last sunset, we handle the driving so you can enjoy the island.</p>
+      </div>
+
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" data-services></div>
+    </div>
+  </section>
+
+  <!-- ============================ FLEET ============================ -->
+  <section id="fleet" class="bg-night py-20 lg:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-end justify-between gap-6">
+        <div class="max-w-2xl">
+          <span class="text-xs font-700 uppercase tracking-[0.18em] text-gold">Our fleet</span>
+          <h2 class="mt-3 font-display text-3xl font-800 text-white text-balance sm:text-4xl">Clean, comfortable &amp; air-conditioned</h2>
+          <p class="mt-4 text-lg text-white/60 text-pretty">Pick the vehicle that fits your group and luggage. Prices are starting fares — get an exact quote on WhatsApp.</p>
+        </div>
+        <a href="https://wa.me/94761234567" target="_blank" rel="noopener" class="hidden rounded-xl border border-white/20 px-5 py-3 text-sm font-600 text-white transition hover:border-gold hover:text-gold sm:inline-flex">Ask about availability</a>
+      </div>
+
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" data-fleet></div>
+    </div>
+  </section>
+
+  <!-- ============================ POPULAR ROUTES ============================ -->
+  <section id="routes" class="py-20 lg:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <span class="text-xs font-700 uppercase tracking-[0.18em] text-gold">Popular routes</span>
+        <h2 class="mt-3 font-display text-3xl font-800 text-night text-balance sm:text-4xl">Fixed-fare airport transfers</h2>
+        <p class="mt-4 text-lg text-night/60 text-pretty">Our most-booked routes from Bandaranaike International Airport (CMB). Each has a dedicated page with full details &amp; pricing.</p>
+      </div>
+
+      <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" data-routes></div>
+    </div>
+  </section>
+
+  <!-- ============================ TOURS ============================ -->
+  <section id="tours" class="bg-sand py-20 lg:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <span class="text-xs font-700 uppercase tracking-[0.18em] text-gold">Sri Lanka tours</span>
+        <h2 class="mt-3 font-display text-3xl font-800 text-night text-balance sm:text-4xl">Curated day &amp; round tours</h2>
+        <p class="mt-4 text-lg text-night/60 text-pretty">Beaches, hills, wildlife and ancient cities — with a driver-guide who knows every shortcut and viewpoint.</p>
+      </div>
+
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-tours></div>
+    </div>
+  </section>
+
+  <!-- ============================ WHY CHOOSE US ============================ -->
+  <section class="py-20 lg:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid items-center gap-14 lg:grid-cols-2">
+        <div class="relative">
+          <div class="overflow-hidden rounded-3xl bg-gradient-to-br from-ocean to-teal shadow-soft">
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80"
+                 onerror="this.remove()" alt="Professional driver opening car door" class="aspect-[4/5] w-full object-cover" />
+          </div>
+          <div class="absolute -bottom-6 -right-2 hidden rounded-2xl border border-night/10 bg-white p-5 shadow-soft sm:block">
+            <div class="font-display text-3xl font-800 text-teal">100%</div>
+            <div class="text-sm font-500 text-night/60">Fixed pricing<br/>No hidden charges</div>
+          </div>
+        </div>
+
+        <div>
+          <span class="text-xs font-700 uppercase tracking-[0.18em] text-gold">Why Weligama Cabs</span>
+          <h2 class="mt-3 font-display text-3xl font-800 text-night text-balance sm:text-4xl">Travel that feels effortless</h2>
+          <p class="mt-4 text-lg text-night/60 text-pretty">We obsess over the details so your trip is smooth from the first message to the final drop-off.</p>
+
+          <div class="mt-8 grid gap-4 sm:grid-cols-2" data-why></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ REVIEWS ============================ -->
+  <section id="reviews" class="bg-night py-20 lg:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-end justify-between gap-6">
+        <div class="max-w-2xl">
+          <span class="text-xs font-700 uppercase tracking-[0.18em] text-gold">Customer reviews</span>
+          <h2 class="mt-3 font-display text-3xl font-800 text-white text-balance sm:text-4xl">Loved by travelers worldwide</h2>
+        </div>
+        <div class="flex items-center gap-3 text-white/80">
+          <span class="font-display text-4xl font-800 text-gold">4.9</span>
+          <div>
+            <div class="flex text-gold">★★★★★</div>
+            <div class="text-xs text-white/55">from 600+ reviews</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-3" data-reviews></div>
+    </div>
+  </section>
+
+  <!-- ============================ FAQ ============================ -->
+  <section id="faq" class="py-20 lg:py-28">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <span class="text-xs font-700 uppercase tracking-[0.18em] text-gold">FAQ</span>
+        <h2 class="mt-3 font-display text-3xl font-800 text-night text-balance sm:text-4xl">Questions, answered</h2>
+      </div>
+      <div class="mt-10 grid gap-3" data-faq></div>
+
+      <div class="mt-10 rounded-2xl border border-night/10 bg-white p-6 text-center shadow-card">
+        <p class="text-night/70">Still have a question?</p>
+        <a href="https://wa.me/94761234567" target="_blank" rel="noopener" class="mt-3 inline-flex items-center gap-2 rounded-xl bg-whatsapp px-5 py-3 text-sm font-700 text-white">Chat with us on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ FINAL CTA ============================ -->
+  <section class="px-4 pb-20 sm:px-6 lg:px-8">
+    <div class="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-gradient-to-br from-teal to-ocean px-6 py-14 shadow-soft sm:px-12 sm:py-16">
+      <div class="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-gold/20 blur-2xl"></div>
+      <div class="absolute -bottom-20 -left-10 h-64 w-64 rounded-full bg-white/10 blur-2xl"></div>
+      <div class="relative grid items-center gap-8 lg:grid-cols-12">
+        <div class="lg:col-span-8">
+          <h2 class="font-display text-3xl font-800 text-white text-balance sm:text-4xl lg:text-5xl">Need a reliable ride in Sri Lanka?</h2>
+          <p class="mt-4 max-w-xl text-lg text-white/85 text-pretty">Get a quote within minutes. Message us your pickup, drop-off and date — we'll confirm your fare and driver right away.</p>
+        </div>
+        <div class="flex flex-col gap-3 lg:col-span-4 lg:items-end">
+          <a href="https://wa.me/94761234567?text=Hi%20Weligama%20Cabs,%20I%20need%20a%20ride." target="_blank" rel="noopener"
+             class="inline-flex w-full items-center justify-center gap-2.5 rounded-2xl bg-white px-7 py-4 text-base font-700 text-night shadow-soft transition hover:bg-sand lg:w-auto">
+            <svg viewBox="0 0 24 24" class="h-5 w-5 text-whatsapp" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.7-.84-2-.93-.27-.1-.46-.15-.65.15-.2.3-.74.93-.9 1.12-.18.2-.34.22-.63.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.18-.3-.02-.46.13-.6.13-.14.3-.34.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.65-1.57-.9-2.15-.24-.56-.48-.48-.65-.49l-.56-.01c-.2 0-.5.07-.77.36-.27.3-1.02 1-1.02 2.42 0 1.43 1.04 2.8 1.19 3 .15.2 2.05 3.12 4.96 4.38.7.3 1.24.48 1.66.62.7.22 1.33.19 1.83.12.56-.08 1.7-.7 1.95-1.36.24-.67.24-1.24.17-1.36-.07-.12-.27-.2-.56-.34z"/><path d="M12 2a10 10 0 0 0-8.6 15.07L2 22l5.05-1.32A10 10 0 1 0 12 2z"/></svg>
+            Book on WhatsApp
+          </a>
+          <a href="#quote" class="inline-flex w-full items-center justify-center rounded-2xl border border-white/40 px-7 py-4 text-base font-600 text-white transition hover:bg-white/10 lg:w-auto">Get Free Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="bg-night pt-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-10 pb-12 md:grid-cols-12">
+        <div class="md:col-span-4">
+          <a href="#top" class="flex items-center gap-3">
+            <span class="grid h-10 w-10 place-items-center rounded-xl bg-gold text-night">
+              <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6.5 17l-1.2-5.2A2 2 0 0 1 7.25 9.3h9.5a2 2 0 0 1 1.95 2.5L17.5 17"/><path d="M5 9.5 6.3 5.8A2 2 0 0 1 8.2 4.5h7.6a2 2 0 0 1 1.9 1.3L19 9.5"/><circle cx="7.5" cy="19" r="1.6"/><circle cx="16.5" cy="19" r="1.6"/></svg>
+            </span>
+            <span class="font-display text-lg font-700 text-white">Weligama Cabs</span>
+          </a>
+          <p class="mt-4 max-w-xs text-sm leading-relaxed text-white/55">Reliable airport transfers, private taxis and curated tours across Sri Lanka — with professional, English-speaking drivers, available 24/7.</p>
+          <div class="mt-5 flex gap-3">
+            <a href="https://wa.me/94761234567" target="_blank" rel="noopener" class="grid h-10 w-10 place-items-center rounded-xl bg-white/10 text-white transition hover:bg-whatsapp" aria-label="WhatsApp"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.07L2 22l5.05-1.32A10 10 0 1 0 12 2zm0 18.2a8.18 8.18 0 0 1-4.17-1.14l-.3-.18-3 .78.8-2.92-.2-.31A8.2 8.2 0 1 1 12 20.2z"/></svg></a>
+            <a href="#" class="grid h-10 w-10 place-items-center rounded-xl bg-white/10 text-white transition hover:bg-gold hover:text-night" aria-label="Facebook"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
+            <a href="#" class="grid h-10 w-10 place-items-center rounded-xl bg-white/10 text-white transition hover:bg-gold hover:text-night" aria-label="Instagram"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg></a>
+          </div>
+        </div>
+
+        <div class="md:col-span-2">
+          <h3 class="text-sm font-700 text-white">Services</h3>
+          <ul class="mt-4 grid gap-2.5 text-sm text-white/55">
+            <li><a href="#services" class="hover:text-gold">Airport Transfers</a></li>
+            <li><a href="#services" class="hover:text-gold">Private Taxi</a></li>
+            <li><a href="#services" class="hover:text-gold">Car With Driver</a></li>
+            <li><a href="#tours" class="hover:text-gold">Sri Lanka Tours</a></li>
+            <li><a href="#services" class="hover:text-gold">Luxury Vehicle Hire</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <h3 class="text-sm font-700 text-white">Popular routes</h3>
+          <ul class="mt-4 grid gap-2.5 text-sm text-white/55">
+            <li><a href="#routes" class="hover:text-gold">Colombo Airport → Weligama</a></li>
+            <li><a href="#routes" class="hover:text-gold">Colombo Airport → Mirissa</a></li>
+            <li><a href="#routes" class="hover:text-gold">Colombo Airport → Galle</a></li>
+            <li><a href="#routes" class="hover:text-gold">Colombo Airport → Ella</a></li>
+            <li><a href="#routes" class="hover:text-gold">Colombo Airport → Sigiriya</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <h3 class="text-sm font-700 text-white">Contact</h3>
+          <ul class="mt-4 grid gap-3 text-sm text-white/55">
+            <li class="flex items-start gap-3"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+94761234567" class="hover:text-gold">+94 76 123 4567</a></li>
+            <li class="flex items-start gap-3"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:hello@weligamacabs.lk" class="hover:text-gold">hello@weligamacabs.lk</a></li>
+            <li class="flex items-start gap-3"><svg class="mt-0.5 h-4 w-4 shrink-0 text-gold" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Weligama, Southern Province, Sri Lanka</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center justify-between gap-3 border-t border-white/10 py-6 text-xs text-white/45 sm:flex-row">
+        <p>© <span data-year></span> Weligama Cabs. All rights reserved.</p>
+        <div class="flex gap-5">
+          <a href="#" class="hover:text-white/70">Privacy Policy</a>
+          <a href="#" class="hover:text-white/70">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/94761234567" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"
+     class="fixed bottom-5 right-5 z-50 grid h-14 w-14 place-items-center rounded-full bg-whatsapp text-white shadow-soft transition hover:scale-105">
+    <svg viewBox="0 0 24 24" class="h-7 w-7" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.07L2 22l5.05-1.32A10 10 0 1 0 12 2zm0 18.2a8.18 8.18 0 0 1-4.17-1.14l-.3-.18-3 .78.8-2.92-.2-.31A8.2 8.2 0 1 1 12 20.2zM17.5 14.4c-.3-.15-1.7-.84-2-.93-.27-.1-.46-.15-.65.15-.2.3-.74.93-.9 1.12-.18.2-.34.22-.63.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.18-.3-.02-.46.13-.6.13-.14.3-.34.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.65-1.57-.9-2.15-.24-.56-.48-.48-.65-.49l-.56-.01c-.2 0-.5.07-.77.36-.27.3-1.02 1-1.02 2.42 0 1.43 1.04 2.8 1.19 3 .15.2 2.05 3.12 4.96 4.38.7.3 1.24.48 1.66.62.7.22 1.33.19 1.83.12.56-.08 1.7-.7 1.95-1.36.24-.67.24-1.24.17-1.36-.07-.12-.27-.2-.56-.34z"/></svg>
+  </a>
+
+  <!-- ============================ DATA + RENDER ============================ -->
+  <script>
+    const wa = (msg) => `https://wa.me/94761234567?text=${encodeURIComponent(msg)}`;
+
+    /* ---------- Services ---------- */
+    const services = [
+      { icon:'🚖', title:'Airport Transfers', desc:'Meet & greet at arrivals, flight tracking, and a fixed fare to anywhere on the island.' },
+      { icon:'🚗', title:'Private Taxi Service', desc:'Door-to-door rides, point to point, on your schedule — never shared with strangers.' },
+      { icon:'👔', title:'Car With Driver', desc:'Hire by the day with a professional chauffeur who knows the roads and the best stops.' },
+      { icon:'🏝️', title:'Sri Lanka Tours', desc:'Day trips and multi-day round tours covering beaches, hills, wildlife and heritage sites.' },
+      { icon:'🏨', title:'Hotel Transfers', desc:'Smooth hotel-to-hotel and hotel-to-airport transfers with help for your luggage.' },
+      { icon:'💎', title:'Luxury Vehicle Hire', desc:'Premium sedans, SUVs and vans for weddings, business and special occasions.' },
+    ];
+    document.querySelector('[data-services]').innerHTML = services.map(s => `
+      <article class="group rounded-2xl border border-night/10 bg-white p-7 shadow-card transition hover:-translate-y-1 hover:border-gold/40 hover:shadow-soft">
+        <div class="grid h-14 w-14 place-items-center rounded-2xl bg-sand text-3xl transition group-hover:bg-gold/15">${s.icon}</div>
+        <h3 class="mt-5 font-display text-xl font-700 text-night">${s.title}</h3>
+        <p class="mt-2 text-night/60 text-pretty">${s.desc}</p>
+        <a href="${wa('Hi, I\'m interested in '+s.title)}" target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-1.5 text-sm font-600 text-teal transition group-hover:gap-2.5">Learn more
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg></a>
+      </article>`).join('');
+
+    /* ---------- Fleet ---------- */
+    const fleet = [
+      { name:'Economy Car', img:'https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=800&q=80', pax:'1–3', bags:'2', price:'$28' },
+      { name:'Comfort Sedan', img:'https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=80', pax:'1–3', bags:'3', price:'$35' },
+      { name:'SUV / 4WD', img:'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=800&q=80', pax:'1–5', bags:'4', price:'$48' },
+      { name:'Luxury Van', img:'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=800&q=80', pax:'6–9', bags:'8', price:'$60' },
+    ];
+    document.querySelector('[data-fleet]').innerHTML = fleet.map(v => `
+      <article class="overflow-hidden rounded-2xl bg-white shadow-card transition hover:-translate-y-1 hover:shadow-soft">
+        <div class="relative aspect-[16/10] bg-gradient-to-br from-ocean to-teal">
+          <img src="${v.img}" onerror="this.remove()" alt="${v.name}" class="absolute inset-0 h-full w-full object-cover" />
+          <span class="absolute left-3 top-3 rounded-full bg-night/80 px-3 py-1 text-xs font-600 text-white backdrop-blur">${v.name}</span>
+        </div>
+        <div class="p-5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-display text-lg font-700 text-night">${v.name}</h3>
+            <div class="text-right"><div class="text-[11px] uppercase tracking-wider text-night/45">from</div><div class="font-display text-lg font-800 text-teal">${v.price}</div></div>
+          </div>
+          <div class="mt-4 flex items-center gap-5 text-sm text-night/60">
+            <span class="inline-flex items-center gap-1.5"><svg class="h-4 w-4 text-teal" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>${v.pax}</span>
+            <span class="inline-flex items-center gap-1.5"><svg class="h-4 w-4 text-teal" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>${v.bags} bags</span>
+          </div>
+          <a href="${wa('Hi, I\'d like to book the '+v.name)}" target="_blank" rel="noopener" class="mt-5 block rounded-xl bg-gold py-3 text-center text-sm font-700 text-night transition hover:bg-golddk">Book Now</a>
+        </div>
+      </article>`).join('');
+
+    /* ---------- Routes ---------- */
+    const routes = [
+      { to:'Weligama', km:'160 km', time:'~2h 45m', price:'$55', img:'https://images.unsplash.com/photo-1586500036706-41963de24d8b?auto=format&fit=crop&w=800&q=80' },
+      { to:'Mirissa', km:'165 km', time:'~3h', price:'$58', img:'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80' },
+      { to:'Galle', km:'145 km', time:'~2h 30m', price:'$50', img:'https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=800&q=80' },
+      { to:'Ella', km:'230 km', time:'~5h 30m', price:'$85', img:'https://images.unsplash.com/photo-1566296314736-6eaac1ca0cb9?auto=format&fit=crop&w=800&q=80' },
+      { to:'Arugam Bay', km:'320 km', time:'~7h', price:'$110', img:'https://images.unsplash.com/photo-1537519646099-335112f03225?auto=format&fit=crop&w=800&q=80' },
+      { to:'Sigiriya', km:'175 km', time:'~4h', price:'$75', img:'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80' },
+    ];
+    document.querySelector('[data-routes]').innerHTML = routes.map(r => `
+      <a href="${wa('Hi, I want an airport transfer to '+r.to)}" target="_blank" rel="noopener"
+         class="group flex items-center gap-4 overflow-hidden rounded-2xl border border-night/10 bg-white p-4 shadow-card transition hover:-translate-y-0.5 hover:border-gold/40 hover:shadow-soft">
+        <div class="relative h-20 w-24 shrink-0 overflow-hidden rounded-xl bg-gradient-to-br from-ocean to-teal">
+          <img src="${r.img}" onerror="this.remove()" alt="${r.to}" class="absolute inset-0 h-full w-full object-cover transition group-hover:scale-105" />
+        </div>
+        <div class="min-w-0 flex-1">
+          <div class="text-[11px] font-600 uppercase tracking-wider text-night/45">Colombo Airport →</div>
+          <div class="truncate font-display text-lg font-700 text-night">${r.to}</div>
+          <div class="mt-1 flex items-center gap-3 text-xs text-night/55"><span>${r.km}</span><span class="h-1 w-1 rounded-full bg-night/20"></span><span>${r.time}</span></div>
+        </div>
+        <div class="text-right">
+          <div class="text-[11px] uppercase tracking-wider text-night/45">from</div>
+          <div class="font-display text-lg font-800 text-teal">${r.price}</div>
+        </div>
+      </a>`).join('');
+
+    /* ---------- Tours ---------- */
+    const tours = [
+      { name:'Southern Coast Tour', days:'Day tour', desc:'Galle Fort, stilt fishermen, turtle hatchery and palm-lined beaches.', img:'https://images.unsplash.com/photo-1565967511849-76a60a516170?auto=format&fit=crop&w=900&q=80' },
+      { name:'Ella Tour', days:'1–2 days', desc:'Nine Arch Bridge, Little Adam\'s Peak and tea-country train rides.', img:'https://images.unsplash.com/photo-1566296314736-6eaac1ca0cb9?auto=format&fit=crop&w=900&q=80' },
+      { name:'Yala Safari Tour', days:'Day / overnight', desc:'Morning jeep safari in search of leopards, elephants and exotic birds.', img:'https://images.unsplash.com/photo-1564760055775-d63b17a55c44?auto=format&fit=crop&w=900&q=80' },
+      { name:'Sigiriya Tour', days:'Day tour', desc:'Climb the ancient Lion Rock fortress and explore Dambulla cave temples.', img:'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80' },
+      { name:'Cultural Triangle Tour', days:'2–3 days', desc:'Anuradhapura, Polonnaruwa and Kandy — Sri Lanka\'s ancient heart.', img:'https://images.unsplash.com/photo-1625134673337-519d4d10b313?auto=format&fit=crop&w=900&q=80' },
+      { name:'Hill Country Round Tour', days:'3–5 days', desc:'Nuwara Eliya, tea estates, waterfalls and misty mountain villages.', img:'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=900&q=80' },
+    ];
+    document.querySelector('[data-tours]').innerHTML = tours.map(t => `
+      <article class="group overflow-hidden rounded-2xl bg-white shadow-card transition hover:-translate-y-1 hover:shadow-soft">
+        <div class="relative aspect-[16/11] bg-gradient-to-br from-ocean to-teal">
+          <img src="${t.img}" onerror="this.remove()" alt="${t.name}" class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-night/70 via-transparent"></div>
+          <span class="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-[11px] font-600 text-night">${t.days}</span>
+          <h3 class="absolute bottom-3 left-4 right-4 font-display text-xl font-700 text-white">${t.name}</h3>
+        </div>
+        <div class="p-5">
+          <p class="text-night/60 text-pretty">${t.desc}</p>
+          <a href="${wa('Hi, tell me more about the '+t.name)}" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-1.5 text-sm font-600 text-teal transition group-hover:gap-2.5">View tour
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m0 0-6-6m6 6-6 6"/></svg></a>
+        </div>
+      </article>`).join('');
+
+    /* ---------- Why choose us ---------- */
+    const why = [
+      { t:'Fixed pricing', d:'The fare we quote is the fare you pay.' },
+      { t:'No hidden charges', d:'No surge, no extra for luggage or stops.' },
+      { t:'English-speaking drivers', d:'Friendly, professional and knowledgeable.' },
+      { t:'Clean vehicles', d:'Air-conditioned and sanitised before every trip.' },
+      { t:'24/7 support', d:'Reach a real person any time, day or night.' },
+      { t:'Airport meet & greet', d:'We wait with a name board at arrivals.' },
+    ];
+    document.querySelector('[data-why]').innerHTML = why.map(w => `
+      <div class="flex items-start gap-3 rounded-2xl border border-night/10 bg-white p-4 shadow-card">
+        <span class="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-teal/10 text-teal">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></svg>
+        </span>
+        <div><div class="font-600 text-night">${w.t}</div><div class="text-sm text-night/55">${w.d}</div></div>
+      </div>`).join('');
+
+    /* ---------- Reviews ---------- */
+    const reviews = [
+      { name:'Sarah M.', from:'United Kingdom', src:'Tripadvisor', text:'Driver was waiting at arrivals with a sign, helped with our bags and got us to Mirissa safely. Spotless car and a fair, fixed price. Highly recommend!' },
+      { name:'Daniel K.', from:'Germany', src:'Google', text:'Booked a 4-day round tour. Our driver was a brilliant guide — knew all the best spots and was so patient with the kids. Will use again.' },
+      { name:'Aiko T.', from:'Japan', src:'Google', text:'Replied on WhatsApp within minutes and confirmed everything clearly. Airport pickup was seamless even with a delayed flight. Thank you!' },
+    ];
+    document.querySelector('[data-reviews]').innerHTML = reviews.map(r => `
+      <figure class="flex flex-col rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+        <div class="flex items-center gap-2"><span class="flex text-gold">★★★★★</span><span class="ml-auto rounded-full bg-white/10 px-2.5 py-1 text-[11px] font-600 text-white/70">${r.src}</span></div>
+        <blockquote class="mt-4 flex-1 text-white/80 text-pretty">"${r.text}"</blockquote>
+        <figcaption class="mt-5 flex items-center gap-3">
+          <span class="grid h-10 w-10 place-items-center rounded-full bg-gold/20 font-700 text-gold">${r.name.charAt(0)}</span>
+          <span><span class="block font-600 text-white">${r.name}</span><span class="block text-xs text-white/50">${r.from}</span></span>
+        </figcaption>
+      </figure>`).join('');
+
+    /* ---------- FAQ ---------- */
+    const faqs = [
+      { q:'How do I book a ride?', a:'The fastest way is to message us on WhatsApp with your pickup, drop-off, date and number of passengers. You can also fill in the quote form on this page. We confirm your fare and driver within minutes.' },
+      { q:'Do you offer airport pickups?', a:'Yes. We track your flight, so even if it is delayed your driver will be waiting at the arrivals hall with a name board for a smooth meet & greet.' },
+      { q:'Can I pay by card?', a:'You can pay in cash (LKR, USD, EUR or GBP) directly to your driver, or by card / bank transfer for advance and tour bookings. Just let us know what is convenient.' },
+      { q:'Are your prices fixed?', a:'Absolutely. We quote a fixed all-inclusive fare before your trip — there are no meters, no surge pricing and no hidden charges for luggage or short stops.' },
+      { q:'Are your drivers licensed and insured?', a:'Every driver is fully licensed, experienced and insured. Our vehicles are air-conditioned, regularly serviced and cleaned before each trip.' },
+      { q:'Can you arrange multi-day tours?', a:'Yes — we design custom day tours and round tours across the whole island, including hotels and stops along the way if you wish. Just tell us your interests.' },
+    ];
+    document.querySelector('[data-faq]').innerHTML = faqs.map(f => `
+      <details class="group rounded-2xl border border-night/10 bg-white px-5 shadow-card">
+        <summary class="flex cursor-pointer items-center justify-between gap-4 py-5 font-600 text-night">
+          ${f.q}
+          <svg class="faq-chevron h-5 w-5 shrink-0 text-teal" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <p class="pb-5 text-night/60 text-pretty">${f.a}</p>
+      </details>`).join('');
+
+    /* ---------- Interactions ---------- */
+    document.querySelector('[data-year]').textContent = new Date().getFullYear();
+
+    const header = document.querySelector('[data-header]');
+    const headerbar = document.querySelector('[data-headerbar]');
+    const onScroll = () => {
+      if (window.scrollY > 20) { headerbar.classList.add('bg-night/95'); }
+      else { headerbar.classList.remove('bg-night/95'); }
+    };
+    window.addEventListener('scroll', onScroll); onScroll();
+
+    const menu = document.querySelector('[data-menu]');
+    document.querySelector('[data-menu-btn]').addEventListener('click', () => menu.classList.toggle('hidden'));
+    document.querySelectorAll('[data-close]').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+
+    document.querySelector('[data-quote-form]').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const i = e.target.querySelectorAll('input, select');
+      const msg = `Hi Weligama Cabs! I'd like a quote.%0APickup: ${i[0].value}%0ADrop-off: ${i[1].value}%0ADate: ${i[2].value}%0APassengers: ${i[3].value}%0APhone: ${i[4].value}`;
+      window.open(`https://wa.me/94761234567?text=${msg}`, '_blank');
+    });
+  </script>
+</body>
+</html>
